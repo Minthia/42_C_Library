@@ -6,7 +6,7 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 02:22:47 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/08 02:22:48 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:38:09 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	print_hex_line(unsigned char *tmp, unsigned char *end)
 	while (i < 16)
 	{
 		if (tmp + i < end)
-			print_hex_char(curr[i]);
+			print_hex_char(tmp[i]);
 		else
 		{
 			ft_putchar(' ');

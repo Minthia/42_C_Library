@@ -6,9 +6,11 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 09:09:34 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/11/11 10:22:55 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:05:38 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {

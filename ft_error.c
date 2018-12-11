@@ -6,9 +6,12 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 02:51:09 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/08 02:51:10 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:30:20 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
 
 void	ft_error(char *s)
 {

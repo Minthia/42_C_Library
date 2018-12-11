@@ -6,9 +6,11 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:15:13 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/11/10 16:19:57 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:12:40 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 size_t		ft_wordlen(char const *s, char c)
 {

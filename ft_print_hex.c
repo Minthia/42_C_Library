@@ -6,7 +6,7 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 02:18:38 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/08 02:18:40 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:37:46 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	ft_print_hex(unsigned int value, size_t n)
 		value /= 16;
 		i--;
 	}
-	while (i >= (8 - n) && i >= 0)
+	while (i >= (8 - (int)n) && i >= 0)
 		hex[i--] = '0';
 	while (i < 8)
-		ft_putchar(output[i++]);
+		ft_putchar(hex[i++]);
 }

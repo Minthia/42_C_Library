@@ -6,9 +6,11 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:45:57 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/11/11 09:56:40 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:03:24 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

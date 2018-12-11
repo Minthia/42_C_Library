@@ -6,7 +6,7 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 09:15:28 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/11/11 09:36:10 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:28:36 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ void	ft_bubblesort(int **tab, size_t n)
 {
 	size_t	i;
 	int		bool_sort;
-	char	*tmp;
 
 	bool_sort = 0;
-	while (!sort)
+	while (!bool_sort)
 	{
 		bool_sort = 1;
 		i = -1;

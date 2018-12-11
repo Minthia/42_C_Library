@@ -6,9 +6,11 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 02:55:34 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/08 02:55:36 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:39:04 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 char	*ft_stpcpy(char *dst, const char *src)
 {

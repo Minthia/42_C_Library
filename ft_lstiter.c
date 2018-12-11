@@ -6,9 +6,11 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:52:47 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/11/09 16:11:43 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:14:55 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {

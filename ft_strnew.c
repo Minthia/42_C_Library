@@ -6,7 +6,7 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:24:13 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/11/11 11:01:58 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:12:14 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strnew(size_t n)
 {
-	return ((char*)ft_memalloc(n + 1))
+	return ((char*)ft_memalloc(n + 1));
 }

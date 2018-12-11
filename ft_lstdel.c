@@ -6,11 +6,12 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 22:51:13 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/11/11 09:12:03 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:14:34 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
@@ -20,7 +21,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	if (!(*alst) || !alst || !del)
 		return ;
 	new = *alst;
-	while (next)
+	while (new->next)
 	{
 		tmp = new;
 		new = new->next;

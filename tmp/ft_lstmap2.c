@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 22:19:47 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/11/22 18:40:43 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/10 09:30:02 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/11/10 15:10:34 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strnstr(const char *s, const char *to_find, size_t n)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	int	i;
-	int	j;
+	t_list	*new;
+	t_list	*tmp;
 
-	i = 0;
-	j = 0;
-	if (*to_find == 0)
-		return ((char *)s);
-	while (s[i])
+	if (!lst || !f)
+		return (NULL);
+	new = NULL;
+	while (lst)
 	{
-		j = 0;
-		while (s[i + j] == to_find[j] && to_find[j] && (size_t)(i + j) < n)
-			j++;
-		if (to_find[j] == '\0')
-			return ((char *)s + i);
-		i++;
+		tmp = f(lst);
+		if (!tmp)
+			return (NULL);
+		ft_lstpush(&new, tmp);
+		lst = lst->next;
+		free(tmp);
 	}
-	return (NULL);
+	return (new);
 }

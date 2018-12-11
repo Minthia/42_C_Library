@@ -6,7 +6,7 @@
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 13:42:19 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/11 08:07:30 by hdo-minh         ###   ########.fr       */
+/*   Updated: 2018/12/11 08:48:44 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strstr(const char *s, const char *to_find)
 		return ((char *)s);
 	while (*s)
 	{
-		if (strncmp(s, to_find, ft_strlen(to_find)) == 0)
+		if (ft_strncmp(s, to_find, ft_strlen(to_find)) == 0)
 			return ((char *)s);
 		s++;
 	}

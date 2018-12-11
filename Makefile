@@ -6,7 +6,7 @@
 #    By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 14:31:08 by hdo-minh          #+#    #+#              #
-#    Updated: 2018/12/10 09:30:34 by hdo-minh         ###   ########.fr        #
+#    Updated: 2018/12/11 08:58:56 by hdo-minh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -117,8 +117,6 @@ OBJ_PATH = obj
 OBJ_NAME = $(SRC_NAME:%.c=%.o)
 
 SRC = $(SRC_NAME)
-
-#OBJ = $(addprefix $(OBJ_PATH)/, $(OBJ_NAME))
 
 all: $(NAME)
 

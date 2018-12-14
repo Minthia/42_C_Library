@@ -1,3 +1,3 @@
-# libft
+# C Library Libft
 
 test

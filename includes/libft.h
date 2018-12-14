@@ -13,9 +13,13 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <limits.h>
 
+/*
+** FOR MOULINETTE
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
+*/
 
 # define C_CLEAR ("\033[H\033[2J")
 # define C_RESET ("\033[0m")
@@ -44,9 +48,11 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-/****************************
+/*
+*****************************
 ** LIBC FUNCTIONS - PART 1 **
-****************************/
+*****************************
+*/
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -77,9 +83,11 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
-/**********************************
+/*
+***********************************
 ** ADDITIONAL FUNCTIONS - PART 2 **
-**********************************/
+***********************************
+*/
 
 void				*ft_memalloc(size_t n);
 void				ft_memdel(void **ap);
@@ -106,9 +114,11 @@ void				ft_putstr_fd(const char *s, int fd);
 void				ft_putendl_fd(const char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
-/********************
+/*
+*********************
 ** BONUS FUNCTIONS **
-********************/
+*********************
+*/
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstadd(t_list **alst, t_list *new);
@@ -117,13 +127,15 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-/***********************
+/*
+************************
 ** PERSONAL FUNCTIONS **
-***********************/
+************************
+*/
 
 unsigned int		ft_abs(int value);
 unsigned long long	ft_atoull(const char *s);
-void				ft_bubblesort(char **tab, size_t n);
+void				ft_bubblesort(int **tab, size_t n);
 int					ft_check_bit(int nbr, int index);
 void				ft_error(char *s);
 int					ft_isblank(int c);

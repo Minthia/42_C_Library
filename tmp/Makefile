@@ -3,19 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dde-jesu <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/11/30 10:00:57 by dde-jesu          #+#    #+#              #
-#    Updated: 2018/12/14 16:51:05 by hdo-minh         ###   ########.fr        #
+#    Created: 2018/11/06 14:31:08 by hdo-minh          #+#    #+#              #
+#    Updated: 2018/12/11 08:58:56 by hdo-minh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 #DIRECTORY
-SRC_DIR = src
 OBJ_DIR = ./obj
-INC_DIR = includes
+SRC_DIR = ./src
+INC_DIR = ./includes
 
 #COMPILATION
 CC = clang
@@ -42,30 +42,38 @@ _RED=\x1b[31m
 _GREEN=\x1b[32m
 _YELLOW=\x1b[33m
 _BLUE=\x1b[34m
+_PURPLE=\x1b[35m
+_CYAN=\x1b[36m
 _WHITE=\x1b[37m
 _END=\x1b[0m
 
+#RULES
 all:
-	@$(MAKE) $(NAME)
+	@$(MAKE) $(NAME) --no-print-directory
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@$(PRECOMPILE)
-	@$(CC) $(CFLAGS) -c -o $@ $<
-	@printf "%-60b\r" "$(ECHO) $(_RED) Compiling... $(_END)"
-	@$(POSTCOMPILE)
+	$(PRECOMPILE)
+	$(CC) $(CFLAGS) -c -o $@ $<
+	#printf "%-60b\r" "$(ECHO) $(_PURPLE) Compiling $< $(_END)"
+	$(POSTCOMPILE)
 
 $(NAME): $(OBJ) $(INC)
-	@ar rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
-	@rm -rf $(OBJ_DIR)
+	rm -rf $(OBJ_DIR)
+
+norme: clean
+	norminette -R CheckForbiddenSourceHeader $(SRC)
+	norminette -R CheckForbiddenSourceHeader includes/fillit.h
+	norminette -R CheckForbiddenSourceHeader libft/*.c libft/*.h
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -rf $(NAME)
 
 re:
-	@$(MAKE) fclean
-	@$(MAKE) all
+	@$(MAKE) fclean --no-print-directory
+	@$(MAKE) all --no-print-directory
 
 .PHONY: all clean fclean re
 .PRECIOUS: src.mk author

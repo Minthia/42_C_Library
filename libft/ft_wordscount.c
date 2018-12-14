@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_wordscount.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/08 22:10:54 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/12/11 08:13:00 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include <string.h>
+
+size_t		ft_wordscount(char const *s, char c)
 {
-	return (x < y ? x : y);
+	size_t		count;
+
+	count = 0;
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		if (*s && *s != c)
+			count++;
+		while (*s && *s != c)
+			s++;
+	}
+	return (count);
 }

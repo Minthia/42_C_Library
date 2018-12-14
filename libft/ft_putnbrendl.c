@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_putnbrendl.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/12/08 01:56:45 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/12/08 01:56:47 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include <unistd.h>
+#include "../../includes/libft.h"
+
+void	ft_putnbrendl(int n)
 {
-	return (x < y ? x : y);
+	ft_putnbr(n);
+	write(1, "\n", 1);
 }

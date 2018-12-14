@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/07 13:42:19 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/12/11 08:48:44 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include <stdlib.h>
+#include "../../includes/libft.h"
+
+char	*ft_strstr(const char *s, const char *to_find)
 {
-	return (x < y ? x : y);
+	if (*to_find == 0)
+		return ((char *)s);
+	while (*s)
+	{
+		if (ft_strncmp(s, to_find, ft_strlen(to_find)) == 0)
+			return ((char *)s);
+		s++;
+	}
+	return (NULL);
 }

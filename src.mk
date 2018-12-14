@@ -11,12 +11,15 @@
 # **************************************************************************** #
 
 
+#BIT
 SRC += src/bit/ft_check_bit.c
 SRC += src/bit/ft_set_bit.c
 SRC += src/bit/ft_toggle_bit.c
+#CONVERT
 SRC += src/convert/ft_atoi.c
 SRC += src/convert/ft_atoull.c
 SRC += src/convert/ft_itoa.c
+#IN_OUT
 SRC += src/in_out/ft_print_hex.c
 SRC += src/in_out/ft_print_memory.c
 SRC += src/in_out/ft_putchar.c
@@ -29,6 +32,7 @@ SRC += src/in_out/ft_putnbrendl.c
 SRC += src/in_out/ft_putnbrendl_fd.c
 SRC += src/in_out/ft_putstr.c
 SRC += src/in_out/ft_putstr_fd.c
+#LST
 SRC += src/lst/ft_lstadd.c
 SRC += src/lst/ft_lstadd_end.c
 SRC += src/lst/ft_lstdel.c
@@ -40,10 +44,12 @@ SRC += src/lst/ft_lstnew.c
 SRC += src/lst/ft_lstpush.c
 SRC += src/lst/ft_lstpush_alloc.c
 SRC += src/lst/ft_lstsize.c
+#MATHS
 SRC += src/maths/ft_abs.c
 SRC += src/maths/ft_max.c
 SRC += src/maths/ft_min.c
 SRC += src/maths/ft_sqrt.c
+#MEM
 SRC += src/mem/ft_bzero.c
 SRC += src/mem/ft_memalloc.c
 SRC += src/mem/ft_memccpy.c
@@ -54,6 +60,7 @@ SRC += src/mem/ft_memdel.c
 SRC += src/mem/ft_memmove.c
 SRC += src/mem/ft_memset.c
 SRC += src/mem/ft_realloc.c
+#STR
 SRC += src/str/ft_stpcpy.c
 SRC += src/str/ft_stpncpy.c
 SRC += src/str/ft_strcat.c
@@ -88,6 +95,7 @@ SRC += src/str/ft_strsub.c
 SRC += src/str/ft_strtrim.c
 SRC += src/str/ft_wordlen.c
 SRC += src/str/ft_wordscount.c
+#UTILITY
 SRC += src/utility/ft_bubblesort.c
 SRC += src/utility/ft_error.c
 SRC += src/utility/ft_isalnum.c

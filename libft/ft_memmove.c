@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/07 09:05:35 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/11/11 10:04:00 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include "../../includes/libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	return (x < y ? x : y);
+	if ((unsigned char *)src > (unsigned char *)dst)
+		ft_memcpy(dst, src, n);
+	else
+	{
+		while (n--)
+			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
+	}
+	return (dst);
 }

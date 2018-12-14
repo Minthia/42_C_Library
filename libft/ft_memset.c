@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/06 14:45:57 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/12/11 08:03:24 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include <string.h>
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	return (x < y ? x : y);
+	while (n--)
+		((unsigned char*)s)[n] = (unsigned char)c;
+	return ((void *)s);
 }

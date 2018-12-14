@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoull.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/08 02:30:43 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/08 02:30:44 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/08 22:35:20 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/11/11 11:21:57 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "../../includes/libft.h"
 
-unsigned long long		ft_atoull(const char *s)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	unsigned long long	ret;
-	int					sign;
+	t_list	*new;
 
-	ret = 0;
-	sign = 1;
-	while ((*s >= 9 && *s <= 13) || *s == 32) s++;
-	if (*s == '-')
-		sign = -1;
-	if (*s == '-' || *s == '+')
-		s++;
-	while (ft_isdigit(*s))
+	if (!(new = (t_list *)malloc(sizeof(*new))))
+		return (NULL);
+	if (!content)
 	{
-		ret = ret * 10 + *s - 48;
-		s++;
+		new->content = NULL;
+		new->content_size = 0;
 	}
-	return (ret * sign);
+	else
+	{
+		if (!(new->content = (void*)ft_memalloc(content_size)))
+		{
+			free(new);
+			return (NULL);
+		}
+		ft_memmove(new->content, content, content_size);
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }

@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/07 10:50:34 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/11/11 10:20:17 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include "../../includes/libft.h"
+
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	return (x < y ? x : y);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = ft_strlen(s1);
+	while (s2[i] && i < n)
+		s1[j++] = ((char *)s2)[i++];
+	s1[j] = '\0';
+	return (s1);
 }

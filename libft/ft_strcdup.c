@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_strcdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/11 10:06:33 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/11/11 10:25:24 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include <stdlib.h>
+#include "../../includes/libft.h"
+
+char	*ft_strcdup(const char *src, char c)
 {
-	return (x < y ? x : y);
+	char	*dst;
+	size_t	i;
+
+	i = 0;
+	if (!src && !src[i])
+		return (NULL);
+	while (src[i] && src[i] != c)
+		i++;
+	if (!(dst = ft_strsub(src, 0, i)))
+		return (NULL);
+	return (dst);
 }

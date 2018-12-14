@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/08 13:41:27 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/11/11 11:09:43 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include <stdlib.h>
+#include "../../includes/libft.h"
+
+char	*ft_strmap(const char *s, char (*f)(char))
 {
-	return (x < y ? x : y);
+	char	*map;
+	int		i;
+
+	if (!s || !f || !(map = ft_strnew(ft_strlen(s))))
+		return (NULL);
+	i = -1;
+	while (s[++i])
+		map[i] = f(s[i]);
+	return (map);
 }

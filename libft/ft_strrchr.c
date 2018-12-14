@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/07 13:31:03 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/11/11 10:36:55 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include <stdlib.h>
+#include "../../includes/libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-	return (x < y ? x : y);
+	int		i;
+
+	i = (int)ft_strlen(s) + 1;
+	while (--i >= 0)
+	{
+		if ((char)s[i] == (char)c)
+			return ((char *)(s + i));
+	}
+	return (NULL);
 }

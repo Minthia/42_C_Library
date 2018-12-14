@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/07 23:42:03 by hdo-minh          #+#    #+#             */
-/*   Updated: 2018/12/07 23:42:04 by hdo-minh         ###   ########.fr       */
+/*   Created: 2018/11/08 14:46:50 by hdo-minh          #+#    #+#             */
+/*   Updated: 2018/11/11 11:05:38 by hdo-minh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_min(int x, int y)
+#include "../../includes/libft.h"
+
+int		ft_strnequ(const char *s1, const char *s2, size_t n)
 {
-	return (x < y ? x : y);
+	if (!s1 || !s2 || ft_strncmp(s1, s2, n))
+		return (0);
+	return (1);
 }

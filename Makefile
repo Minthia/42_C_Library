@@ -16,6 +16,7 @@ NAME = libft.a
 SRC_DIR = src
 OBJ_DIR = ./obj
 INC_DIR = includes
+PUSH_DIR = ./libft
 
 #COMPILATION
 CC = clang
@@ -56,6 +57,23 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 $(NAME): $(OBJ) $(INC)
 	@ar rcs $(NAME) $(OBJ)
+
+cpy: 
+	@mkdir -p $(PUSH_DIR)
+	@cp -rf Makefile $(PUSH_DIR)
+	@cp -rf src.mk $(PUSH_DIR)
+	@cp -rf author $(PUSH_DIR)
+	@cp -rf $(SRC_DIR)/bit/*.c $(PUSH_DIR)
+	@cp -rf $(SRC_DIR)/convert/*.c $(PUSH_DIR)
+	@cp -rf $(SRC_DIR)/in_out/*.c $(PUSH_DIR)
+	@cp -rf $(SRC_DIR)/lst/*.c $(PUSH_DIR)
+	@cp -rf $(SRC_DIR)/maths/*.c $(PUSH_DIR)
+	@cp -rf $(SRC_DIR)/mem/*.c $(PUSH_DIR)
+	@cp -rf $(SRC_DIR)/str/*.c $(PUSH_DIR)
+	@cp -rf $(SRC_DIR)/utility/*.c $(PUSH_DIR)
+
+ccpy:
+	@rm -rf $(PUSH_DIR)
 
 clean:
 	@rm -rf $(OBJ_DIR)

@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../includes/libft.h"
+
 size_t	ft_strclen(const char *str, int c)
 {
 	size_t	i;
 
 	i = 0;
-	while (*str && str[n] && str[n] != (unsigned char)c)
+	while (*str && str[i] && str[i] != (unsigned char)c)
 		i++;
 	return (i);
 }

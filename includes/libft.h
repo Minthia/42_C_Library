@@ -160,7 +160,7 @@ size_t				ft_strclen(const char *str, int c);
 int					ft_sqrt(int nbr);
 char				*ft_stpcpy(char *dst, const char *src);
 char				*ft_stpncpy(char *dst, const char *src, size_t n);
-char				*ft_strcdup(const char *src, char c);
+char				*ft_strcdup(const char *src, int c);
 char				*ft_strndup(const char *src, size_t n);
 char				*ft_strnjoin(const char *s1, const char *s2, size_t n);
 char				*ft_strnjoin_free(const char *s1, const char *s2, size_t n);

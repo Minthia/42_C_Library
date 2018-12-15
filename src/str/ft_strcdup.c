@@ -10,20 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "../../includes/libft.h"
 
-char	*ft_strcdup(const char *src, char c)
+char	*ft_strcdup(const char *src, int c)
 {
 	char	*dst;
-	size_t	i;
 
-	i = 0;
-	if (!src && !src[i])
+	if (!(dst = ft_strnew(ft_strclen(src, c))))
 		return (NULL);
-	while (src[i] && src[i] != c)
-		i++;
-	if (!(dst = ft_strsub(src, 0, i)))
-		return (NULL);
-	return (dst);
+	return (ft_strccpy(dst, src, c));
 }

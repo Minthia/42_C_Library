@@ -6,7 +6,7 @@
 #    By: hdo-minh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/14 16:15:28 by hdo-minh          #+#    #+#              #
-#    Updated: 2018/12/14 16:15:30 by hdo-minh         ###   ########.fr        #
+#    Updated: 2018/12/15 13:33:56 by hdo-minh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,8 +64,10 @@ SRC += src/mem/ft_realloc.c
 SRC += src/str/ft_stpcpy.c
 SRC += src/str/ft_stpncpy.c
 SRC += src/str/ft_strcat.c
+SRC += src/str/ft_strccpy.c
 SRC += src/str/ft_strcdup.c
 SRC += src/str/ft_strchr.c
+SRC += src/str/ft_strclen.c
 SRC += src/str/ft_strclr.c
 SRC += src/str/ft_strcmp.c
 SRC += src/str/ft_strcpy.c

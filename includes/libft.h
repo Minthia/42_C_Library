@@ -130,7 +130,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 ************************
 ** PERSONAL FUNCTIONS **
-************************
+************************m
 */
 
 unsigned int		ft_abs(int value);
@@ -155,6 +155,8 @@ void				ft_putnbrendl(int n);
 void				ft_putnbrendl_fd(int n, int fd);
 void				*ft_realloc(void *ptr, size_t n);
 int					ft_set_bit(int nbr, int index, char value);
+char				*ft_strccpy(char *dest, const char *src, int c);
+size_t				ft_strclen(const char *str, int c);
 int					ft_sqrt(int nbr);
 char				*ft_stpcpy(char *dst, const char *src);
 char				*ft_stpncpy(char *dst, const char *src, size_t n);

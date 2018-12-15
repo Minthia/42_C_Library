@@ -22,7 +22,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	c = (unsigned char)c;
 	data = ((long)c << 56) + ((long)c << 48) + ((long)c << 40) + \
 	((long)c << 32) + (c << 24) + (c << 16) + (c << 8) + c;
-	ptr = (long *)ptr;
+	ptr = (long *)s;
 	i = 0;
 	while (n >= sizeof(long))
 	{
@@ -35,5 +35,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		*ptr2++ = c;
 		n--;
 	}
-	return (ptr);
+	return (s);
 }

@@ -13,14 +13,15 @@
 #include <stdlib.h>
 #include "../../includes/libft.h"
 
-void	*ft_realloc(void *ptr, size_t n)
-{
-	unsigned char	*tmp;
 
-	tmp = (unsigned char*)malloc(n);
-	if (tmp != NULL)
+void	*ft_realloc(void *ptr, size_t oldsize, size_t newsize)
+{
+	void	*ptr;
+
+	tmp = malloc(newsize);
+	if (oldsize)
 	{
-		ft_memmove(tmp, ptr, n);
+		ft_memcpy(tmp, ptr, oldsize);
 		free(ptr);
 	}
 	return (tmp);
